@@ -1,0 +1,42 @@
+﻿#Register_Title {
+    color: green;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: Tahoma;
+    margin: 10px 0;
+}
+
+#Register_Line {
+    background-image: url('../images/line_bg.gif');
+    background-repeat: repeat-x;
+    height: 5px;
+    margin-bottom: 10px;
+}
+
+form div {
+    margin: 20px 0px;
+    color: black;
+}
+
+.form-DangKy > div {
+    font-size: larger;
+    background-image: url('../images/icons/bullet-arrow.PNG');
+    background-repeat: no-repeat;
+}
+
+    .form-DangKy > div > p {
+        margin-left: 30px;
+    }
+
+#Register {
+    margin: 40px 275px 0px;
+}
+
+form img {
+    margin-left: 30px;
+}
+
+#checkbox-receive {
+    margin-left: 20px;
+    zoom: 1.3;
+}

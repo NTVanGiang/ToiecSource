@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/Shared/_Frame.cshtml";
+}
+
+<html>
+<head>
+    <link href="~/CSS/DangKy.css" rel="stylesheet" />
+
+</head>
+<body>
+    <label id="Register_Title">Đăng ký</label>
+    <div id="Register_Line"></div>
+
+    <form class="form-DangKy">
+        <div><p>Full name</p><input type="text" class="form-control" /></div>
+        <div><p>Username</p><input type="text" class="form-control" /></div>
+        <div><p>Password</p><input type="password" class="form-control" /></div>
+        <div><p>Confirm password</p><input type="password" class="form-control" /></div>
+        <div><p>Email</p><input type="email" class="form-control" /></div>
+        <div><p>Mobile</p><input type="tel" class="form-control" /></div>
+        <div>
+            <p>Where do you live?</p>
+            <div>
+                <select>
+                    <option value="Hà Nội">Hà Nội</option>
+                    <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                    <option value="Đà nẵng">Đà nẵng</option>
+                    <option value="Khác">Khác</option>
+                </select>
+            </div>
+        </div>
+        <div><p>Your birth day</p><input type="date" class="form-control" /></div>
+        @*min="1957-01-01" max="2006-01-01" 11 tuoi -> 60 tuoi*@
+        <div>
+            <p class="checkbox-inline" style="margin-left: 10px">Receive new article:<input id="checkbox-receive" type="checkbox" /></p>
+        </div>
+        <div>
+            <p>Security code:<img src="~/images/security code/secutỉy-code-1.jpg" /></p>
+
+            <div><input type="text" class="form-control" /></div>
+        </div>
+        <div id="Register"><button type="button" class="btn btn-success btn-md">Đăng ký</button></div>
+    </form>
+</body>
+</html>
+
+
+

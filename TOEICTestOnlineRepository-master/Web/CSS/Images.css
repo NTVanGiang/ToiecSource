@@ -1,0 +1,9 @@
+﻿#img-footer {
+    /*background: red;*/
+    margin: 20px;
+}
+
+    #img-footer img {
+        width: 1167px;
+        height: 350px;
+    }

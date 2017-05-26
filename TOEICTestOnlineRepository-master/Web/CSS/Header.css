@@ -1,0 +1,39 @@
+﻿/*#id_header {
+    color: #ff5454;
+    text-align: center;
+    font-size: 46px;
+}*/
+
+#id_login {
+    float: right;
+}
+
+    #id_login a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+#id_logo {
+    /*background: red;*/
+    float: left;
+    margin-left: 20px;
+}
+
+    #id_logo img {
+        width: 320px;
+        height: 100px;
+    }
+
+
+#id_slogan {
+    /*background: blue;*/
+    float: left;
+    clear: right;
+    margin-left: 15px;
+}
+
+    #id_slogan img {
+        width: 500px;
+        height: 85px;
+    }

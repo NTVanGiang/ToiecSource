@@ -1,0 +1,119 @@
+﻿body {
+    /*font-family: sans-serif;
+    font-size: 15px;*/
+}
+
+/*INSPIRATION MESSENGER*/
+h1 {
+    /*color: #ff5454;
+    text-align: center;
+    font-size: 46px;*/
+}
+
+* { /*all*/
+    /*padding: 0px;*/ /*space content-edge*/ /*top right bottom left*/
+}
+
+a {
+    /*text-decoration: none;*/ /*underline*/
+}
+
+.clear { /*float-left-right; h = 0*/
+    clear: both;
+}
+
+.frame {
+    /*width: 1206px;*/
+    /*height: auto;*/
+    /*background: rgb(238, 238, 238);*/ /*rgb(red,green,blue)*/
+    /*margin: 0px auto;*/ /*auto: align-center*/
+}
+
+#menu-top {
+}
+
+    #menu-top a {
+        /*background: #bb0000;*/
+        text-decoration: none;
+        font-weight: bolder;
+    }
+
+
+
+    #menu-top > ul > li {
+        background: none;
+        margin: 3px 2px 0px 2px;
+        height: 35px;
+        /*border-right: 1px dotted #dedede;*/
+        border-radius: 10px;
+        display: block;
+        padding-top: 0;
+    }
+
+        #menu-top > ul > li > a {
+        }
+
+        #menu-top > ul > li:last-child {
+            /*border-right: none;*/
+            /*width: 63.7px;*/
+            width: 84.84px;
+        }
+
+    #menu-top > ul {
+        height: 40px;
+        background-image: url('../images/bgmenu.jpg');
+        background-size: auto;
+        background-repeat: repeat-x;
+        /*background: #c31e1e;*/
+        /*background-image: url('../images/bottom_bg.jpg');
+        background-repeat: repeat-x;
+        background-position: bottom;*/
+    }
+
+    /*level-1*/
+    #menu-top ul li {
+        /*background: #bb0000;*/
+        list-style: none; /*dot notation*/
+        float: left; /*up-down -> left-right*/
+        padding: 8px 11.1px;
+        position: relative;
+        transition: 0.5s;
+    }
+
+
+        /*level-1-content*/
+        #menu-top ul li a {
+            color: #ffffff;
+            font-weight: 600;
+            line-height: 10px;
+            /*height: 30px;*/
+        }
+        /*level-2*/
+        #menu-top ul li ul {
+            display: none;
+            position: absolute;
+            width: 310px;
+            background: #3c3a3a;
+            margin-top: 8px;
+            border-radius: 5px;
+        }
+
+            #menu-top ul li ul li {
+                width: 310px;
+                /*border-bottom: 1px dotted #dedede;*/
+            }
+
+    /*hover*/
+    #menu-top > ul > li:hover ul {
+        display: block;
+    }
+
+    #menu-top > ul > li:hover {
+        background: black;
+        z-index: 1;
+    }
+
+    #menu-top > ul > li > ul > li:hover {
+        /*zoom: 105%;*/
+        text-shadow: 3px 2px green;
+    }

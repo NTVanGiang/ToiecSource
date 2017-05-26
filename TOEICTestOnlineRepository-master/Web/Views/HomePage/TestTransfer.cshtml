@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "TestTransfer";
+    Layout = "~/Views/Shared/_Frame.cshtml";
+    var bien = (string)TempData["name"];
+}
+
+<body>
+    <h2>TestTransfer</h2>
+    <ul>
+        @foreach (var str in ViewBag.lst_str)
+        {
+            <li>@str</li>
+        }
+
+    </ul>
+
+    <div id="name" style="display:none">
+        @ViewBag.name
+    </div>
+
+    <div id="name">
+        @bien
+    </div>
+
+    <script>
+        var name = document.getElementById("name").innerHTML;
+        var hello = "<div><b>" + "Xin chào " + name + "!" + "<b/>" + "</div>";
+        var logout = '<div><a onclick="Logout()">Đăng xuất</a></div>';
+        document.getElementById("id_login").innerHTML = hello + logout;
+
+        function Logout() {
+            window.location.href = '@Url.Action("Index", "HomePage")';
+        }
+    </script>
+</body>
+
+
+
+

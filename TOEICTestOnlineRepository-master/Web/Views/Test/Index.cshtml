@@ -1,0 +1,666 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/CSS/Test.css" rel="stylesheet" />
+    <script src="~/js/Test.js"></script>
+
+    <link href="~/CSS/PhanTrang.css" rel="stylesheet" />
+    <script src="~/js/PhanTrang.js"></script>
+
+    <link href="~/CSS/Modal.css" rel="stylesheet" />
+
+</head>
+<body onload="onLoad()">
+    <div id="test-frame">
+        <!--menu-part-->
+        <div id="top" class="time">
+            <div id="top-part">
+                <ul>
+                    <li><a onclick="getPart(1)">Part 1</a></li>
+                    <li><a onclick="getPart(2)">Part 2</a></li>
+                    <li><a onclick="getPart(3)">Part 3</a></li>
+                    <li><a onclick="getPart(4)">Part 4</a></li>
+                    <li><a onclick="getPart(5)">Part 5</a></li>
+                    <li><a onclick="getPart(6)">Part 6</a></li>
+                    <li><a onclick="getPart(7)">Part 7</a></li>
+                </ul>
+            </div>
+            @*<div style="clear:both"></div>*@
+            <div id="top-time"><label id="timeCountDown">2 : 0 : 0</label></div>
+        </div>
+        <div id="content">
+            <!--left-->
+            <div>
+                <div id="test-frame-left">
+                    <div id="test-frame-left-scroll">
+                        <div id="test-frame-left-content">
+                            <!--p1 q1-->
+                            <div id="part1" class="part">
+                                <!--part-->
+                                <div class="my-center my-part">Part 1</div>
+                                <!--assignment-->
+                                <div class="my-bold">Look at the picture and listen to the sentences. Choose the sentence that best describes the picture:</div>
+                                <div id="question1" class="question">
+                                    <!--order-->
+                                    <div class="my-bold">1.</div>
+                                    <!--img-->
+                                    <img src="~/Questions/img/img1.PNG" alt="" style="width:350px;height:273px;" />
+                                    <!--audio-->
+                                    <div>
+                                        <audio controls>
+                                            <source src="~/Questions/sound/s1.mp3" />
+                                        </audio>
+                                    </div>
+                                    <!--order2-->
+                                    <div id="q1" hidden="hidden">
+                                        <div class="my-background">
+                                            <div class="my-bold">Question 1:</div>
+                                            <!--answers-->
+                                            <table class="fixed">
+                                                <colgroup><col width="20" /></colgroup>
+                                                <tr>
+                                                    <!--icon-true/false-->
+                                                    @*<td><img src="~/Questions/icon/icon_true.jpg" alt="" style="width:18px;height:12px;" /></td>*@
+                                                    <td id="q1-A"></td>
+                                                    <td><b>A. </b>A man is carrying a ladder</td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="q1-B"></td>
+                                                    <td><b>B. </b>A man is climbing up the steps</td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="q1-C"></td>
+                                                    <td><b>C. </b>A man is entering the building</td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="q1-D"></td>
+                                                    <td><b>D. </b>A man is picking up some tools</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--p2 q11-->
+                            <div id="part2" class="part">
+                                <div class="my-center my-part">Part 2</div>
+                                <div class="my-bold">Listen to the question and the three responses. Choose the response that best answers the question:</div>
+                                <div id="question2" class="question">
+                                    <div class="my-bold">11.</div>
+                                    <div>
+                                        <audio controls="controls">
+                                            <source src="~/Questions/sound/s11.mp3" type="audio/mpeg" />
+                                        </audio>
+                                    </div>
+
+                                    <div id="q2" hidden="hidden">
+                                        <div class="my-background">
+                                            <div class="my-bold">Question 11: Would you like to go to dinner with us?</div>
+                                            <table class="fixed">
+                                                <colgroup><col width="20" /></colgroup>
+                                                <tr>
+                                                    <td id="q2-A"></td>
+                                                    <td><b>A. </b>Thanks but I already ate</td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="q2-B"></td>
+                                                    <td><b>B. </b>I’d like to see it first</td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="q2-C"></td>
+                                                    <td><b>C. </b>The steak dinner, please</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--p3 q41-->
+                            <div id="part3" class="part">
+                                <div class="my-center my-part">Part 3</div>
+                                <div class="my-bold">Listen to the dialogue. Then read each question and choose the best answer:</div>
+                                <div class="my-background-2">
+                                    <div>W: I’m calling to change the date of my return flight</div>
+
+                                    <div>M: Of course, Ms. Smith. I see that you are scheduled to return on November 15. When would you like me to change it to?</div>
+
+                                    <div>W: I really have to come back a day early. I hope there is a flight available?</div>
+
+                                    <div>M: You’re in luck. There is a seat available on the 3-o’clock flight. Will that be okay?</div>
+                                </div>
+
+                                <div>
+                                    <audio controls="controls">
+                                        <source src="~/Questions/sound/s41.mp3" type="audio/mpeg" />
+
+                                    </audio>
+                                </div>
+                                <div class="my-bold">41. What is the woman doing?</div>
+                                <div><b>A. </b>Changing her flight schedule</div>
+                                <div><b>B. </b>Booking a hotel room</div>
+                                <div><b>C. </b>Making an appointment</div>
+                                <div><b>D. </b>Purchasing a book</div>
+                                <br />
+                                <div class="my-bold">42. Why is the woman concerned?</div>
+                                <div><b>A. </b>Her plane has been delayed</div>
+                                <div><b>B. </b>The book she wants is sold out</div>
+                                <div><b>C. </b>The hotel room is fully booked</div>
+                                <div><b>D. </b>She may not be able to come back early</div>
+                                <br />
+                                <div class="my-bold">43. When will the woman most likely come back?</div>
+                                <div><b>A. </b>On November 13</div>
+                                <div><b>B. </b>On November 14</div>
+                                <div><b>C. </b>On November 15</div>
+                                <div><b>D. </b>On November 16</div>
+                                <br />
+                            </div>
+
+                            <!--p4 q71-->
+                            <div id="part4" class="part">
+                                <div class="my-center my-part">Part 4</div>
+                                <div class="my-bold">Listen to the talk. Then read each question and choose the best answer:</div>
+                                <div class="my-background">May I have your attention everyone! The Electronics Exhibit will be closing in 15 minutes. We’d like at this time to ask all vendors to start packing your goods. Visitors to the exhibit should make your last-minute purchases at this time as well. And lastly, those who have parked your cars in the underground garage, you are to move your vehicles by 6:15. The garage door will be shut down at that time. Thank you and we hope everyone’s had a great time today.</div>
+                                <div>
+                                    <audio controls="controls">
+                                        <source src="~/Questions/sound/s71.mp3" type="audio/mpeg" />
+                                    </audio>
+                                </div>
+                                <div class="my-bold">71. What is being announced?</div>
+                                <div><b>A. </b>The closing of the exhibit</div>
+                                <div><b>B. </b>An illegally-parked vehicle</div>
+                                <div><b>C. </b>The day’s agenda</div>
+                                <div><b>D. </b>The sale of the day</div>
+                                <br />
+
+                                <div class="my-bold">72. What products are most likely being exhibited?</div>
+                                <div><b>A. </b>Cars</div>
+                                <div><b>B. </b>Televisions</div>
+                                <div><b>C. </b>Sofas</div>
+                                <div><b>D. </b>Garage doors</div>
+                                <br />
+
+                                <div class="my-bold">73. What is going to happen at 6:15?</div>
+                                <div><b>A. </b>The exhibition will close</div>
+                                <div><b>B. </b>The vendors will set up their stands</div>
+                                <div><b>C. </b>The garage door will close</div>
+                                <div><b>D. </b>The visitors will be allowed to enter</div>
+                                <br />
+                            </div>
+
+                            <!--p5 q101-->
+                            <div id="part5" class="part">
+                                <div class="my-center my-part">Part 5</div>
+                                <div class="my-bold">Choose the word that best completes the sentence:</div>
+                                <div><b>101. </b>The website of Harvie Publishing Ltd. Has detailed -------- that can help potential authors locate agents for their manuscripts.</div>
+
+                                <div class="my-bold">Question 101:</div>
+                                <div><b>A. </b>instructions</div>
+                                <div><b>B. </b>instruct</div>
+                                <div><b>C. </b>instructor</div>
+                                <div><b>D. </b>instructive</div>
+                            </div>
+
+                            <!--p6 q141-->
+                            <div id="part6" class="part">
+                                <div class="my-center my-part">Part 6</div>
+                                <div class="my-bold">Choose the word or phrase that best completes the blanks:</div>
+                                <div class="my-background-2">
+                                    <div>Dear Mr. Lassi,</div>
+
+                                    <div>We extend our gratitude to you for choosing Secure-1 for providing your home’s security system. The security of your property is our number one priority, and you can be guaranteed of high-quality security monitoring with our system. We assure you that trusting us to (141) ------ your home was the right decision.</div>
+
+                                    <div>From houses in your neighborhood to many of the country’s largest corporations, we are the most popular choice in security in the nation. Our business has received a five-star rating from the National Security Network for the past ten years. Our monitoring and communications systems are continually upgraded, (142) ------ you the best security systems the industry has to offer today.</div>
+
+                                    <div>Do not hesitate to contact us if you have any questions regarding your security package. Operators are available 24 hours a day to assist you with any concerns that you may have. Your business is valuable to us and we want you to be (143) ------ with our service.</div>
+                                </div>
+
+                                <div class="my-bold">141.</div>
+                                <div><b>A. </b>self</div>
+                                <div><b>B. </b>renovate</div>
+                                <div><b>C. </b>repair</div>
+                                <div><b>D. </b>protect</div>
+                                <br />
+
+                                <div class="my-bold">142.</div>
+                                <div><b>A. </b>ensured</div>
+                                <div><b>B. </b>ensuring</div>
+                                <div><b>C. </b>be ensured</div>
+                                <div><b>D. </b>will ensure</div>
+                                <br />
+
+                                <div class="my-bold">143.</div>
+                                <div><b>A. </b>satisfied</div>
+                                <div><b>B. </b>satisfying</div>
+                                <div><b>C. </b>satisfaction</div>
+                                <div><b>D. </b>satisfactory</div>
+                                <br />
+                            </div>
+
+                            <!--p7 q153-->
+                            <div id="part7" class="part">
+                                <div class="my-center my-part">Part 7</div>
+                                <div class="my-bold">Read the passage and choose the correct answer:</div>
+                                <div class="my-background-2">
+                                    <div class="my-center my-bold">MADHAN’S RESTAURANT</div>
+                                    <div>
+                                        Monday-Saturday<br />
+                                        Lunch: 10 a.m. - 4 p. m.<br />
+                                        Dinner: 5 p.m. - 11 p.m.<br />
+                                        Sunday<br />
+                                        Breakfast: 8a.m. - 3 p.m.<br />
+                                        Dinner: 4 p.m. - 9p.m.
+                                    </div>
+
+                                    <div>Daily specials are served during dinner hours and are merely $10.99. All of them include a main course, a non-alcoholic beverage and one side.</div>
+
+                                    <div>
+                                        <pre>      Monday:       Tortellini Alfredo</pre>
+                                        <pre>      Tuesday:      Thai noodles</pre>
+                                        <pre>      Wednesday:    Vegetarian gumbo</pre>
+                                        <pre>      Thursday:     Meat loaf and gravy</pre>
+                                        <pre>      Friday:       Mega burger and fries</pre>
+                                        - Live Jazz band is on Tuesday and Thursday evenings<br />
+                                        - For your convenience please call and make a reservation for Friday and Saturday evenings.
+                                    </div>
+                                </div>
+                                <div class="my-bold">153. On what day are Thai noodles a specials?</div>
+                                <div><b>A. </b>Monday</div>
+                                <div><b>B. </b>Tuesday</div>
+                                <div><b>C. </b>Wednesday</div>
+                                <div><b>D. </b>Friday</div>
+                                <br />
+
+                                <div class="my-bold">154. What is special about Thursday nights?</div>
+                                <div><b>A. </b>Thai food is a special</div>
+                                <div><b>B. </b>Breakfast is available at 9 a.m.</div>
+                                <div><b>C. </b>The drinks are half price</div>
+                                <div><b>D. </b>A live band will play.</div>
+                                <br />
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--right-->
+            <div id="test-frame-right">
+                <div id="test-frame-right-scroll">
+                    <div id="test-frame-right-content">
+                        <!--img icon_true-->
+                        <img id="icon_true" src="~/Questions/icon/icon_true.jpg" alt="" style="width:18px;height:12px;" hidden="hidden" />
+                        <!--img icon_false-->
+                        <img id="icon_false" src="~/Questions/icon/icon_false.jpg" alt="" style="width:18px;height:12px;" hidden="hidden" />
+
+                        <!--btn result-->
+                        @*<div><br /><button id="btnResult" type="button" onclick="getResult()">Result</button></div>*@
+
+                        <!--radio button-->
+                        <form id="chooseAnswer">
+                            <div id="row1" class="row">
+                                <div class="col col1">1.</div>
+                                <div class="col col1">
+                                    <input type="radio" name="q1" value="A">A
+                                    <div id="choose-q1-A"></div>
+                                </div>
+                                <div class="col col1">
+                                    <input type="radio" name="q1" value="B">B
+                                    <div id="choose-q1-B"></div>
+                                </div>
+                                <div class="col col1">
+                                    <input type="radio" name="q1" value="C">C
+                                    <div id="choose-q1-C"></div>
+                                </div>
+                                <div class="col col1">
+                                    <input type="radio" name="q1" value="D">D
+                                    <div id="choose-q1-D"></div>
+                                </div>
+                            </div>
+
+                            <div id="row2" class="row">
+                                <div class="col col2">2.</div>
+                                <div class="col col2">
+                                    <input type="radio" name="q2" value="A">A
+                                    <div id="choose-q2-A"></div>
+                                </div>
+                                <div class="col col2">
+                                    <input type="radio" name="q2" value="B">B
+                                    <div id="choose-q2-B"></div>
+                                </div>
+                                <div class="col col2">
+                                    <input type="radio" name="q2" value="C">C
+                                    <div id="choose-q2-C"></div>
+                                </div>
+                            </div>
+
+
+                            <script>
+                                var totalTime = 7200;
+                                var time = totalTime; //second
+
+                                //count down
+                                var _countDown = setInterval(countDown, 1000);
+                                function countDown() {
+                                    time = time - 1;
+                                    var hour = parseInt(time / 3600);
+                                    var minute = parseInt((time - hour * 3600) / 60);
+                                    var second = time - hour * 3600 - minute * 60;
+                                    document.getElementById("timeCountDown").innerHTML = hour + " : " + minute + " : " + second;
+
+                                    if (time == 0) {
+                                        clearTimeout(_countDown);
+                                    } else {
+
+                                    }
+                                }
+
+                                //display
+                                var topPart = document.getElementById("top-part");
+                                var topTime = document.getElementById("top-time");
+                                var _top = document.getElementById("top");
+                                function showPart() {
+                                    _top.className = "part";
+                                    topPart.style.display = "block";
+                                    topTime.style.display = "none";
+                                }
+
+                                function showTime() {
+                                    _top.className = "time";
+                                    topPart.style.display = "none";
+                                    topTime.style.display = "block";
+                                }
+
+
+                            </script>
+
+                            <button onclick="showPart()" type="button">show part</button>
+                            <button onclick="showTime()" type="button">show time</button>
+
+                        </form>
+                        @*<script>
+                                for (i = 1; i <= 1; i++) {
+                                    var str = '<div>' + i + '.'
+                                        + '<input type="radio" name="q' + i + '" id="radio-A" value="A">A'
+                                        + '<input type="radio" name="q' + i + '" id="radio-B" value="B">B'
+                                        + '<input type="radio" name="q' + i + '" id="radio-C" value="C">C'
+                                        + '<input type="radio" name="q' + i + '" id="radio-D" value="D">D' + '</div > ';
+                                    document.getElementById("chooseAnswer").innerHTML += str;
+                                }
+
+                                for (i = 2; i <= 2; i++) {
+                                    var str = '<div>' + i + '.'
+                                        + '<input type="radio" name="q' + i + '" id="radio-A" value="A">A'
+                                        + '<input type="radio" name="q' + i + '" id="radio-B" value="B">B'
+                                        + '<input type="radio" name="q' + i + '" id="radio-C" value="C">C'
+                                        + '</div > ';
+                                    document.getElementById("chooseAnswer").innerHTML += str;
+                                }
+                            </script>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Trigger/Open The Modal -->
+        <div id="bot">
+            <div><button class="myButton" id="btnNext" onclick="getQuestion(1)" type="button">Next</button></div>
+            <div><button class="myButton" id="btnPrevious" onclick="getQuestion(-1)" type="button">Previous</button></div>
+            <div><button class="myButton myButton-right" id="btnAgain">AGAIN</button></div>
+            <div><button class="myButton myButton-right" id="btnResult">SCORE</button></div>
+
+        </div>
+    </div>
+    <!-- modal -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <div>
+                    <div class="left-close">Kết quả</div>
+                    <span class="close">&times;</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div>Bạn được :</div>
+                <div><b id="scoreListening"></b> điểm phần listening</div>
+                <div><b id="scoreReading"></b> điểm phần reading</div>
+                <div>Tổng số: <b style="color:red" id="score"></b> điểm</div>
+                <br />
+                <div>Kết quả của bạn đã được lưu vào hệ thống!</div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" id="btnXemDapAn" type="button">Xem đáp án</button>
+                <button id="btnThoat" type="button">Thoát</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var score = 0;
+        var scoreListening = 0;
+        var scoreReading = 0;
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btnResult = document.getElementById("btnResult");
+        var btnXemDapAn = document.getElementById("btnXemDapAn");
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btnResult.onclick = function () {
+            //show modal
+            modal.style.display = "block";
+            //get full content
+            left.innerHTML = fullContent;
+            //check result
+            getResult();
+            //get score
+            document.getElementById("score").innerHTML = score;
+            document.getElementById("scoreListening").innerHTML = scoreListening;
+            document.getElementById("scoreReading").innerHTML = scoreReading;
+            //stop timer
+            clearTimeout(_countDown);
+            //time did test
+            alert(totalTime - time);
+            //show all parts
+            showPart();
+
+            // enabled next and previous
+            btnNext.style.display = "none";
+            btnPrevious.style.display = "none";
+
+        }
+
+        btnXemDapAn.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        //// When the user clicks anywhere outside of the modal, close it
+        //window.onclick = function (event) {
+        //    if (event.target == modal) {
+        //        modal.style.display = "none";
+        //    }
+        //}
+
+        function getResult() {
+            //get result for each question
+            getResult2(1, "A");
+            getResult2(2, "A");
+
+            //disabled btnResult
+            var btnResult = document.getElementById("btnResult");
+            //btnResult.disabled = true;
+            btnResult.style.display = "none";
+        }
+
+        function getResult2(qNumber, rightAnswer) {
+            //icon_true|false
+            //icon_true
+            var icon_true = document.getElementById("icon_true");
+            //img_true
+            var img_true = document.createElement("img"); //img!
+            img_true.src = icon_true.src;
+            img_true.alt = icon_true.alt;
+            img_true.width = icon_true.width; //not px
+            img_true.height = icon_true.height;
+
+            //icon_false
+            var icon_false = document.getElementById("icon_false");
+            //img_false
+            var img_false = document.createElement("img");
+            img_false.src = icon_false.src;
+            img_false.alt = icon_false.alt;
+            img_false.width = icon_false.width;
+            img_false.height = icon_false.height;
+
+            //icon_true|false2
+
+            //img_true2
+            var img_true2 = document.createElement("img"); //img!
+            img_true2.src = icon_true.src;
+            img_true2.alt = icon_true.alt;
+            img_true2.width = icon_true.width; //not px
+            img_true2.height = icon_true.height;
+
+            //img_false2
+            var img_false2 = document.createElement("img");
+            img_false2.src = icon_false.src;
+            img_false2.alt = icon_false.alt;
+            img_false2.width = icon_false.width;
+            img_false2.height = icon_false.height;
+
+            var q_ = "q" + qNumber;
+
+            //get answer
+            var formChooseAnswer = document.getElementById("chooseAnswer");
+            var answer = formChooseAnswer.elements[q_].value;
+
+            //show right answers
+
+            //insert img-right: ALWAYS
+            var right = q_ + "-" + rightAnswer;
+            document.getElementById(right).appendChild(img_true);
+
+
+
+            //insert img-wrong if just wrong
+            if (answer == "") {
+                //alert("Choose answer!")
+            } else {
+                if (answer != rightAnswer) {
+                    var wrong = q_ + "-" + answer;
+                    document.getElementById(wrong).appendChild(img_false);
+
+                    var wrong2 = "choose-" + wrong;
+                    document.getElementById(wrong2).appendChild(img_false2);
+                } else {
+                    var right2 = "choose-" + right;
+                    document.getElementById(right2).appendChild(img_true2);
+                    score = score + 1;
+                    if (qNumber < 2) {
+                        scoreListening += 1;
+                    } else {
+                        scoreReading += 1;
+                    }
+                }
+            }
+
+            //show left-questions
+            document.getElementById(q_).hidden = false;
+        }
+
+        var questionNow = 1;
+        var left = document.getElementById("test-frame-left-content")
+        var fullContent = left.innerHTML;
+        var question1 = document.getElementById("question1").innerHTML;
+
+        var btnNext = document.getElementById("btnNext");
+        var btnPrevious = document.getElementById("btnPrevious");
+        var marginLeft = btnPrevious.style.marginLeft;
+        //color of chooser
+        var colorOfCol = "lightseagreen";
+
+        function getQuestion(inc) {
+            //init
+            btnPrevious.style.display = "block";
+            btnPrevious.style.marginLeft = marginLeft;
+            btnNext.style.display = "block";
+
+            //choose row
+            changeColorOfRow(questionNow, questionNow + inc);
+
+            //~> questionNow
+            questionNow += inc;
+            //min
+            if (questionNow == 1) {
+                btnPrevious.style.display = "none";
+            }
+            //max
+            if (questionNow == 2) {
+                btnNext.style.display = "none";
+                btnPrevious.style.marginLeft = "220px";
+            }
+            // get question
+            var id = "question" + questionNow;
+
+            //get fullcontent back
+            left.innerHTML = fullContent;
+
+            var question = document.getElementById(id).innerHTML;
+            left.innerHTML = question;
+            //var arr = document.getElementsByClassName("question");
+            //arr[0].style.display = "none";
+            //arr[1].style.display = "none";
+
+
+            //document.getElementById("question1").style.display = "none";
+        }
+
+        function onLoad() {
+            left.innerHTML = question1;
+            btnPrevious.style.display = "none";
+            //get row now
+            var classColNow = "col" + questionNow;
+            var colNow = document.getElementsByClassName(classColNow);
+            for (var i = 0; i <= 4; i++) {
+                colNow[i].style.backgroundColor = "orange";
+            }
+        }
+
+        function changeColorOfRow(before, now) {
+            var classColNow = "col" + before;
+            var colNow = document.getElementsByClassName(classColNow);
+            for (var i = 0; i < colNow.length; i++) {
+                colNow[i].style.backgroundColor = colorOfCol;
+            }
+
+
+            var _classColNow = "col" + now;
+            var _colNow = document.getElementsByClassName(_classColNow);
+            for (var j = 0; j < _colNow.length; j++) {
+                _colNow[j].style.backgroundColor = "orange";
+            }
+        }
+    </script>
+
+
+</body>
+</html>

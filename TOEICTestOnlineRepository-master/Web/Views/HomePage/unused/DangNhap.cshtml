@@ -1,0 +1,187 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Frame.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" charset="UTF-8" />
+
+    <link href="~/CSS/DangNhap.css" rel="stylesheet" />
+
+    <!-- popup -->
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <link href="~/Content/popup-theme/jquery-ui.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="divContainPopupDangNhap" title="" style="display:none">
+        <label id="Login_Title">Đăng nhập</label>
+        <div class="Login_Line"></div>
+        <div class="lbl">Tên truy cập: </div>
+        <input type="text" class="form-control" placeholder="Enter username" />
+        <div class="lbl">Mật khẩu: </div>
+        <input type="password" class="form-control" placeholder="Enter password" />
+        <div id="Login_Re_For"><a href="">Đăng ký</a> | <a href="">Quên mật khẩu</a></div>
+        <div id="Login_Login"><button type="button" class="btn btn-success btn-md">Đăng nhập</button></div>
+        @*<div><button type="button">Facebook</button> <button type="button">Google</button></div>*@
+
+        <!--fb login-->
+        <script>
+            // This is called with the results from from FB.getLoginStatus().
+            function statusChangeCallback(response) {
+                console.log('statusChangeCallback');
+                console.log(response);
+                // The response object is returned with a status field that lets the
+                // app know the current login status of the person.
+                // Full docs on the response object can be found in the documentation
+                // for FB.getLoginStatus().
+                if (response.status === 'connected') {
+                    // Logged into your app and Facebook.
+                    testAPI();
+                    //window.location.href = '[shift2]Url.Action("Welcome","Test")';
+
+                    //Html.Hidden("RedirectTo", Url.Action("HomePage", "ControllerName"));
+                    // Logged into Facebook but NOT your APP
+                } else if (response.status === 'not_authorized') {
+                    alert('not_authorized');
+
+                } else {
+                    // The person is not logged into your app or we are unable to tell.
+                    //document.getElementById('status').innerHTML = 'Please log ' +
+                    //  'into this app.';
+                    console.log("not connected");
+                }
+            }
+
+            // This function is called when someone finishes with the Login
+            // Button.  See the onlogin handler attached to it in the sample
+            // code below.
+            function checkLoginState() {
+                FB.getLoginStatus(function (response) {
+                    statusChangeCallback(response);
+                });
+            }
+
+            function getStatus() {
+                FB.getLoginStatus(function (response) {
+                    console.log(response.status);
+                });
+
+            }
+
+            window.fbAsyncInit = function () {
+                FB.init({
+                    appId: '128060531086902',
+                    cookie: true,  // enable cookies to allow the server to access
+                    // the session
+                    xfbml: true,  // parse social plugins on this page
+                    version: 'v2.9' // use graph api version 2.8
+                });
+
+                // Now that we've initialized the JavaScript SDK, we call
+                // FB.getLoginStatus().  This function gets the state of the
+                // person visiting this page and can return one of three states to
+                // the callback you provide.  They can be:
+                //
+                // 1. Logged into your app ('connected')
+                // 2. Logged into Facebook, but not your app ('not_authorized')
+                // 3. Not logged into Facebook and can't tell if they are logged into
+                //    your app or not.
+                //
+                // These three cases are handled in the callback function.
+
+                FB.getLoginStatus(function (response) {
+
+                    if (response.status === 'connected') {
+                        FB.logout(function (response) {
+                            // Person is now logged out
+                            console.log(response.status);
+                        });
+
+                    } else {
+                        statusChangeCallback(response);
+                    }
+                });
+
+            };
+
+            // Here we run a very simple test of the Graph API after login is
+            // successful.  See statusChangeCallback() for when this call is made.
+            function testAPI() {
+                console.log('Welcome!  Fetching your information.... ');
+                FB.api('/me', function (response) {
+                    console.log('Successful login for: ' + response.name);
+                    console.log(JSON.stringify(response));
+                    //alert(response.name);
+                    window.location.href = '@Url.Action("TestTransfer", "HomePage", new { name = "_name" })'.replace("_name",response.name);
+                    //document.getElementById('id-login').innerHTML =
+                    //    'Xin chào: ' + response.name + '!';
+                });
+            }
+
+            function logout() {
+                FB.logout(function (response) {
+                    // Person is now logged out
+                    console.log('logout');
+                });
+            }
+
+            //function RequestLoginFB() {
+            //    window.location = 'http://graph.facebook.com/oauth/authorize?client_id=276667759411773&redirect_uri=http://localhost:49991';
+            //}
+        </script>
+
+        <!--
+          Below we include the Login Button social plugin. This button uses
+          the JavaScript SDK to present a graphical Login button that triggers
+          the FB.login() function when clicked.
+        -->
+        <div class="Login_Line" id="Login_Line2"></div>
+        <div id="btn-fb-login">Hoặc đăng nhập với Facebook: <fb:login-button scope="public_profile,email" onlogin="checkLoginState()" size="large" auto_logout_link="true"> </fb:login-button></div>
+        <!--fb login - end-->
+        @*<div id="status" style="display:none">
+            </div>*@
+
+        @*<input type="button" value="ĐĂNG NHẬP" onclick="RequestLoginFB()" />*@
+
+
+        @*<button onclick="getStatus()">check</button>
+            <button onclick="logout()">logout</button>*@
+
+    </div>
+
+    <!-- popup -->
+    <div><br /><input type="button" value="Click to show Popup" onclick="showPopup()" /></div>
+
+    @*<div id="divContainPopup" class="table-responsive">
+        <div><label>popup content</label></div>
+    </div>*@
+
+    <script type="text/javascript">
+        function showPopup() {
+            $("#divContainPopupDangNhap").dialog({
+                height: 400,
+                width: 500,
+                //modal: true,
+                buttons: {
+                    "Cancel": function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+        }
+    </script>
+    <!-- popup - end -->
+
+    @*<script>
+        function Click() {
+            window.location.href = '@Url.Action("TestTransfer", "HomePage", new { name = "_name" })';
+            //document.getElementById("id_login").innerHTML = "hihi";
+        }
+    </script>
+    <input type="button" value="Button" onclick="Click()" />*@
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿#Login_Title {
+    color: green;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: Tahoma;
+    margin: 10px 0;
+}
+
+.Login_Line {
+    background-image: url('../images/line_bg.gif');
+    background-repeat: repeat-x;
+    height: 5px;
+    margin-bottom: 5px;
+}
+
+#Login_Line2 {
+    margin-top: 80px;
+}
+
+body {
+    font-family: sans-serif;
+    color: #3c3c3c;
+}
+
+#Login_Login {
+    /*margin: 10px 275px 0px;*/
+    /*margin: 50px 0px auto;*/
+    margin: 10px 175px 0px;
+    float: left;
+}
+
+.lbl {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#Login_Re_For {
+    float: right;
+    clear: both;
+    font-style: italic;
+}
+
+.form-control {
+    border-color: green;
+}
+
+#btn-fb-login {
+    margin-top: 20px;
+
+}

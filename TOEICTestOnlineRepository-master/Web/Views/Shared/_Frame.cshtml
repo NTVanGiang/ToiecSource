@@ -1,0 +1,742 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Luyện thi TOEIC 4 kỹ năng, Tiếng Anh giao tiếp, Ms Hoa TOEIC - Sứ giả truyền cảm hứng - Ms Hoa TOEIC</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/images/favicon.ico" />
+
+    <link href="~/CSS/Frame.css" rel="stylesheet" />
+    <link href="~/CSS/Header.css" rel="stylesheet" />
+    <link href="~/CSS/MenuTop.css" rel="stylesheet" />
+    <link href="~/CSS/MenuLeft.css" rel="stylesheet" />
+    <link href="~/CSS/MenuBot.css" rel="stylesheet" />
+    <link href="~/CSS/Images.css" rel="stylesheet" />
+
+    @*collapse*@
+    @*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+        <script src="~/Scripts/jquery.collapse.js"></script>*@
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--slideshow-->
+    <link href="~/CSS/SlideShow.css" rel="stylesheet" />
+    <script src="~/js/SlideShow.js"></script>
+
+    <!--Đăng nhập-->
+    <link href="~/CSS/DangNhap.css" rel="stylesheet" />
+    <!-- popup -->
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <link href="~/Content/popup-theme/jquery-ui.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=128060531086902";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <div class="frame">
+        <div class="header">
+            <div id="id_login"><a onclick="showPopup()">Đăng nhập </a> / <a href='@Url.Action("DangKy","HomePage")'>Đăng ký</a></div>
+            @*<h1 id="id_header">INSPIRATION MESSENGER</h1>*@
+            <div id="id_logo">
+                <a href='@Url.Action("Index","HomePage")'><img src="~/images/logo.jpg" /></a>
+            </div>
+            <div id="id_slogan"><img src="~/images/slogan.gif" alt="" /></div>
+            <div class="clear"></div>
+        </div>
+        <div class="menu">
+            @*menu-top*@
+            <div id="menu-top">
+                <ul>
+                    <li><a href='@Url.Action("Index","HomePage")'>Trang chủ</a></li>
+                    <li>
+                        <a href="">Về chúng tôi</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Về Ms Hoa TOEIC</a></li>
+                            <li><a href="">Ms Hoa TOEIC là ai?</a></li>
+                            <li><a href="">Ms Hoa's Blog</a></li>
+                            <li><a href="">Hệ thống cơ sở Ms Hoa TOEIC</a></li>
+                            <li><a href="">Báo chí viết về Ms Hoa TOEIC</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Đội ngũ Sứ giả</a>
+                        <ul>
+                            <li><a href="">Đội ngũ Sứ giả Hà Nội</a></li>
+                            <li><a href="">Đội ngũ Sứ giả HCM</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Học viên Chúng tôi</a>
+                        <ul>
+                            <li><a href="">Vinh danh HV TOEIC List & Read</a></li>
+                            <li><a href="">Vinh danh HV TOEIC Speak & Write</a></li>
+                            <li><a href="">Cảm nhận của học viên</a></li>
+                            <li><a href="">Hoạt động ngoại khoá</a></li>
+                            <li><a href="">Học bổng Ước mơ</a></li>
+                            <li><a href="">"Khoảnh khắc Ms Hoa TOEIC"</a></li>
+                            <li><a href="">Ms Hoa TOEIC's Got Talent</a></li>
+                            <li><a href="">Cuộc thi "Ngàn lời tri ân"</a></li>
+                            <li><a href="">Cuộc thi Ms Hoa TOEIC tới Sài Gòn</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">LỊCH KHAI GIẢNG</a>
+                        <ul>
+                            <li><a href="">Lịch khai giảng Hà Nội</a></li>
+                            <li><a href="">Lịch khai giảng HCM</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Test</a>
+                        <ul>
+                            <li><a href="">Full Test TOEIC List & Read</a></li>
+                            <li><a href="">Full Test TOEIC Speaking</a></li>
+                            <li><a href="">Full Test TOEIC Writing</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Video TOEIC</a>
+                        <ul>
+                            <li><a href="">Bài giảng TOEIC Reading, Listening</a></li>
+                            <li><a href="">Tiếng Anh giao tiếp Công việc</a></li>
+                            <li><a href="">Đội ngũ Sứ giả</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Khóa học</a>
+                        <ul>
+                            <li><a href="">Khóa Pre TOEIC cho người bắt đầu</a></li>
+                            <li><a href="">Khóa TOEIC A (500-550+)</a></li>
+                            <li><a href="">Khóa TOEIC B (650-750+)</a></li>
+                            <li><a href="">Khóa giao tiếp công việc ĐỘT PHÁ</a></li>
+                            <li><a href="">TOEIC Cấp tốc theo yêu cầu</a></li>
+                            <li><a href="">Khoá học Tiếng Anh doanh nghiệp</a></li>
+                            <li><a href="">Lớp TOEIC C (800-990)</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Bài tập các lớp</a>
+                        <ul>
+                            <li><a href="">File nghe & Tapescript</a></li>
+                            <li><a href="">Bài tập luyện thêm</a></li>
+                            <li><a href="">Actual Test</a></li>
+                            <li><a href="">Mid, Final Test for Communication Class</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Test Review</a>
+                        <ul>
+                            <li><a href="">TOEIC Speaking</a></li>
+                            <li><a href="">TOEIC Writing</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="">Liên hệ</a></li>
+                </ul>
+                <div class="clear"></div> @*h = 0 ->*@
+            </div>
+            @*menu-top-end*@
+        </div>
+        <div id="div_slideshow">
+            <div id="id_slideshow_contain">
+                <!--slideshow-->
+                <div id="id_slideshow" class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="~/images/slideshow/1.jpg" style="width:100%">
+                        <div class="text">Caption Text</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="~/images/slideshow/2.jpg" style="width:100%">
+                        <div class="text">Caption Two</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="~/images/slideshow/3.jpg" style="width:100%">
+                        <div class="text">Caption Three</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="~/images/slideshow/4.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="~/images/slideshow/5.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="~/images/slideshow/6.jpg" style="width:100%">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br />
+
+                <div id="id_slideshow_choose" style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+
+                <script>
+                    var slideIndex = 1;
+                    showSlides(slideIndex);
+                </script>
+            </div>
+            <!--slideshow-end-->
+
+            <div id="id_ad_contain">
+                <div id="ad1">
+                    <a target="_blank" href="https://www.google.com.vn/">
+                        <img src="~/images/ad/qc1.PNG" />
+                        <div>Nước Tăng Lực Number 1</div>
+                    </a>
+                </div>
+                <div id="ad2">
+                    <a target="_blank" href="https://www.google.com.vn/">
+                        <img src="~/images/ad/qc1.PNG" />
+                        <div>Nước Tăng Lực Number 1</div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="content">
+            <div class="content-left">
+                @*menu-left*@
+                <div id="menu-left">
+                    <ul>
+                        <li class="menu-left-1">
+                            <a href="">Chia sẻ List & Read</a>
+                            <ul>
+                                <li class="menu-left-2" data-toggle="collapse" data-target="#id_cl1">
+                                    <a>Level 250 - 500</a>
+                                    <ul id="id_cl1" class="collapse">
+                                        <li><a href="">Reading</a></li>
+                                        <li><a href="">Listening</a></li>
+                                    </ul>
+
+                                </li>
+
+                                <li class="menu-left-2" data-toggle="collapse" data-target="#id_cl2">
+                                    <a>Level 500 - 750</a>
+                                    <ul id="id_cl2" class="collapse">
+                                        <li><a href="">Reading</a></li>
+                                        <li><a href="">Listening</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-left-2" data-toggle="collapse" data-target="#id_cl3">
+                                    <a>Level 750 - 990</a>
+                                    <ul id="id_cl3" class="collapse">
+                                        <li><a href="">Reading</a></li>
+                                        <li><a href="">Listening</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-left-1">
+                            <a href="">Luyện tập List & Read</a>
+                            <ul>
+                                <li class="menu-left-2" data-toggle="collapse" data-target="#id_cl4">
+                                    <a>Level 250 - 500</a>
+                                    <ul id="id_cl4" class="collapse">
+                                        <li><a href="">Photo</a></li>
+                                        <li><a href="">Question-Response</a></li>
+                                        <li><a href="">Short conversation</a></li>
+                                        <li><a href="">Short talk</a></li>
+                                        <li><a href="">Incomplete Sentence</a></li>
+                                        <li><a href="">Text completion</a></li>
+                                        <li><a href="">Single passage</a></li>
+                                        <li><a href="">Double passage</a></li>
+                                    </ul>
+
+                                </li>
+
+                                <li class="menu-left-2" data-toggle="collapse" data-target="#id_cl5">
+                                    <a>Level 500 - 750</a>
+                                    <ul id="id_cl5" class="collapse">
+                                        <li><a href="">Photo</a></li>
+                                        <li><a href="">Question-Response</a></li>
+                                        <li><a href="">Short conversation</a></li>
+                                        <li><a href="">Short talk</a></li>
+                                        <li><a href="">Incomplete Sentence</a></li>
+                                        <li><a href="">Text completion</a></li>
+                                        <li><a href="">Single passage</a></li>
+                                        <li><a href="">Double passage</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-left-2" data-toggle="collapse" data-target="#id_cl6">
+                                    <a>Level 750 - 990</a>
+                                    <ul id="id_cl6" class="collapse">
+                                        <li><a href="">Photo</a></li>
+                                        <li><a href="">Question-Response</a></li>
+                                        <li><a href="">Short conversation</a></li>
+                                        <li><a href="">Short talk</a></li>
+                                        <li><a href="">Incomplete Sentence</a></li>
+                                        <li><a href="">Text completion</a></li>
+                                        <li><a href="">Single passage</a></li>
+                                        <li><a href="">Double passage</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-left-1">
+                            <a href="">Test TOEIC List & Read</a>
+                            <ul>
+                                <li class="menu-left-2">
+                                    <a href='@Url.Action("DangNhap","HomePage")'>Mini test</a>
+                                </li>
+
+                                <li class="menu-left-2" data-toggle="collapse" data-target="#id_cl7">
+                                    <a>Skill test</a>
+                                    <ul id="id_cl7" class="collapse">
+                                        <li><a href="">Photo</a></li>
+                                        <li><a href="">Question-Response</a></li>
+                                        <li><a href="">Short conversation</a></li>
+                                        <li><a href="">Short talk</a></li>
+                                        <li><a href="">Incomplete Sentence</a></li>
+                                        <li><a href="">Text completion</a></li>
+                                        <li><a href="">Reading comprehen</a></li>
+                                    </ul>
+
+                                </li>
+                                <li class="menu-left-2">
+                                    <a href="">Full test</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-left-1">
+                            <a href="">TOEIC Speaking</a>
+                            <ul>
+                                <li class="menu-left-2">
+                                    <a href="">Level 0-100</a>
+                                </li>
+
+                                <li class="menu-left-2">
+                                    <a href="">Level 110-150</a>
+
+                                </li>
+                                <li class="menu-left-2">
+                                    <a href="">Level 160-200</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-left-1">
+                            <a href="">Practice TOEIC Speaking</a>
+                            <ul>
+                                <li class="menu-left-2" data-toggle="collapse" data-target="#id_cl8">
+                                    <a>Level 0-100</a>
+                                    <ul id="id_cl8" class="collapse">
+                                        <li><a href="">Read a Text aloud</a></li>
+                                        <li><a href="">Describe a Picture</a></li>
+                                        <li><a href="">Respond Questions I</a></li>
+                                        <li><a href="">Respond Questions II</a></li>
+                                        <li><a href="">Propose a Solution</a></li>
+                                        <li><a href="">Express an Opinion</a></li>
+                                        <li><a href="">Vocabulary</a></li>
+                                        <li><a href="">Listening</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="menu-left-2" data-toggle="collapse" data-target="#id_cl9">
+                                    <a>Level 110-150</a>
+                                    <ul id="id_cl9" class="collapse">
+                                        <li><a href="">Read a Text aloud</a></li>
+                                        <li><a href="">Describe a Picture</a></li>
+                                        <li><a href="">Respond Questions I</a></li>
+                                        <li><a href="">Respond Questions II</a></li>
+                                        <li><a href="">Propose a Solution</a></li>
+                                        <li><a href="">Express an Opinion</a></li>
+                                        <li><a href="">Vocabulary</a></li>
+                                        <li><a href="">Listening</a></li>
+                                    </ul>
+
+                                </li>
+                                <li class="menu-left-2" data-toggle="collapse" data-target="#id_cl10">
+                                    <a>Level 160-200</a>
+                                    <ul id="id_cl10" class="collapse">
+                                        <li><a href="">Read a Text aloud</a></li>
+                                        <li><a href="">Describe a Picture</a></li>
+                                        <li><a href="">Respond Questions I</a></li>
+                                        <li><a href="">Respond Questions II</a></li>
+                                        <li><a href="">Propose a Solution</a></li>
+                                        <li><a href="">Express an Opinion</a></li>
+                                        <li><a href="">Vocabulary</a></li>
+                                        <li><a href="">Listening</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="menu-left-2">
+                                    <a href="">Full Test TOEIC Speaking</a>
+
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-left-1">
+                            <a href="">TOEIC Writing</a>
+                            <ul>
+                                <li class="menu-left-2">
+                                    <a href="">Level 0-100</a>
+                                </li>
+
+                                <li class="menu-left-2">
+                                    <a href="">Level 110-150</a>
+
+                                </li>
+                                <li class="menu-left-2">
+                                    <a href="">Level 160-200</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-left-1">
+                            <a href="">Practice TOEIC Writing</a>
+                            <ul>
+                                <li class="menu-left-2" data-toggle="collapse" data-target="#id_cl11">
+                                    <a>Level 0-100</a>
+                                    <ul id="id_cl11" class="collapse">
+                                        <li><a href="">Write a Sentence</a></li>
+                                        <li><a href="">Respond a Request</a></li>
+                                        <li><a href="">Write an Opinion Essay</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="menu-left-2" data-toggle="collapse" data-target="#id_cl12">
+                                    <a>Level 110-150</a>
+                                    <ul id="id_cl12" class="collapse">
+                                        <li><a href="">Write a Sentence</a></li>
+                                        <li><a href="">Respond a Request</a></li>
+                                        <li><a href="">Write an Opinion Essay</a></li>
+                                    </ul>
+
+                                </li>
+                                <li class="menu-left-2" data-toggle="collapse" data-target="#id_cl13">
+                                    <a>Level 160-200</a>
+                                    <ul id="id_cl13" class="collapse">
+                                        <li><a href="">Write a Sentence</a></li>
+                                        <li><a href="">Respond a Request</a></li>
+                                        <li><a href="">Write an Opinion Essay</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="menu-left-2">
+                                    <a href="">Full Test TOEIC Writing</a>
+
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-left-1">
+                            <a href="">Download sách</a>
+                            <ul>
+                                <li class="menu-left-2">
+                                    <a href="">Level 250 - 500</a>
+                                </li>
+
+                                <li class="menu-left-2">
+                                    <a href="">Level 500 - 750</a>
+
+                                </li>
+                                <li class="menu-left-2">
+                                    <a href="">Level 750 - 990</a>
+
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-left-1">
+                            <a href="">English corner</a>
+                            <ul>
+                                <li class="menu-left-2">
+                                    <a href="">Video TOEIC</a>
+                                </li>
+
+                                <li class="menu-left-2">
+                                    <a href="">Funny English</a>
+
+                                </li>
+                                <li class="menu-left-2">
+                                    <a href="">The Beauty of English</a>
+
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-left-1"><a href="">Học tiếng Anh giao tiếp</a></li>
+
+                        <li class="menu-left-1"><a href="">Thông tin về TOEIC</a></li>
+
+                        <li class="menu-left-1">
+                            <a href="">LỊCH KHAI GIẢNG</a>
+                            <ul>
+                                <li class="menu-left-2">
+                                    <a href="">Lịch khai giảng Hà Nội</a>
+                                </li>
+
+                                <li class="menu-left-2">
+                                    <a href="">Lịch khai giảng Hồ Chí Minh</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                @*menu-left-end*@
+            </div>
+            <div class="content-center">
+                @RenderBody()
+            </div>
+            <div class="content-right">
+                <div class="fb-page" data-href="https://www.facebook.com/mshoatoeic/" data-tabs="" data-width="240" data-height="220" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/mshoatoeic/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/mshoatoeic/">Ms Hoa Toeic</a></blockquote></div>
+                <div id="ad3" class="ad-right">
+                    <a target="_blank" href="https://www.google.com.vn/">
+                        <img src="~/images/ad/qc1.PNG" />
+                        <div>Nước Tăng Lực Number 1</div>
+                    </a>
+                </div>
+                <div id="ad4" class="ad-right">
+                    <a target="_blank" href="https://www.google.com.vn/">
+                        <img src="~/images/ad/qc1.PNG" />
+                        <div>Nước Tăng Lực Number 1</div>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-top"></div>
+            @*menu-bot*@
+            <div class="menu-bot">
+                <ul>
+                    <li><a href="">Trang chủ</a></li>
+                    <li><a href="">VINH DANH Học viên</a></li>
+                    <li><a href="">Cảm nhận Học viên</a></li>
+                    <li><a href="">Lịch KG HN</a></li>
+                    <li><a href="">Lịch KG HCM</a></li>
+                    <li><a href="">Download sách</a></li>
+                    <li><a href="">Tuyển dụng</a></li>
+                    <li><a href="">Liên hệ</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            @*menu-bot-end*@
+
+            <div id="img-footer">
+                <img src="~/images/co-so.jpg" alt="" />
+            </div>
+
+            <br />
+            <br />
+            <br />
+
+        </div>
+    </div>
+
+    <!--Đăng nhập-->
+    <div>
+        <div id="divContainPopupDangNhap" title="" style="display:none">
+            <label id="Login_Title">Đăng nhập</label>
+            <div class="Login_Line"></div>
+            <div class="lbl">Tên truy cập: </div>
+            <input type="text" class="form-control" placeholder="Enter username" />
+            <div class="lbl">Mật khẩu: </div>
+            <input type="password" class="form-control" placeholder="Enter password" />
+            <div id="Login_Re_For"><a href="">Đăng ký</a> | <a href="">Quên mật khẩu</a></div>
+            <div id="Login_Login"><button type="button" class="btn btn-success btn-md">Đăng nhập</button></div>
+            @*<div><button type="button">Facebook</button> <button type="button">Google</button></div>*@
+
+            <!--fb login-->
+            <script>
+            // This is called with the results from from FB.getLoginStatus().
+            function statusChangeCallback(response) {
+                console.log('statusChangeCallback');
+                console.log(response);
+                // The response object is returned with a status field that lets the
+                // app know the current login status of the person.
+                // Full docs on the response object can be found in the documentation
+                // for FB.getLoginStatus().
+                if (response.status === 'connected') {
+                    // Logged into your app and Facebook.
+                    loginSuccessful();
+                    //window.location.href = '[shift2]Url.Action("Welcome","Test")';
+
+                    //Html.Hidden("RedirectTo", Url.Action("HomePage", "ControllerName"));
+                    // Logged into Facebook but NOT your APP
+                } else if (response.status === 'not_authorized') {
+                    alert('not_authorized');
+
+                } else {
+                    // The person is not logged into your app or we are unable to tell.
+                    //document.getElementById('status').innerHTML = 'Please log ' +
+                    //  'into this app.';
+                    console.log("not connected");
+                }
+            }
+
+            // This function is called when someone finishes with the Login
+            // Button.  See the onlogin handler attached to it in the sample
+            // code below.
+            function checkLoginState() {
+                FB.getLoginStatus(function (response) {
+                    statusChangeCallback(response);
+                });
+            }
+
+            function getStatus() {
+                FB.getLoginStatus(function (response) {
+                    console.log(response.status);
+                });
+
+            }
+
+            window.fbAsyncInit = function () {
+                FB.init({
+                    appId: '128060531086902',
+                    cookie: true,  // enable cookies to allow the server to access
+                    // the session
+                    xfbml: true,  // parse social plugins on this page
+                    version: 'v2.9' // use graph api version 2.8
+                });
+
+                // Now that we've initialized the JavaScript SDK, we call
+                // FB.getLoginStatus().  This function gets the state of the
+                // person visiting this page and can return one of three states to
+                // the callback you provide.  They can be:
+                //
+                // 1. Logged into your app ('connected')
+                // 2. Logged into Facebook, but not your app ('not_authorized')
+                // 3. Not logged into Facebook and can't tell if they are logged into
+                //    your app or not.
+                //
+                // These three cases are handled in the callback function.
+
+                FB.getLoginStatus(function (response) {
+
+                    if (response.status === 'connected') {
+                        FB.logout(function (response) {
+                            // Person is now logged out
+                            console.log(response.status);
+                        });
+
+                    } else {
+                        statusChangeCallback(response);
+                    }
+                });
+
+            };
+
+            // Here we run a very simple test of the Graph API after login is
+            // successful.  See statusChangeCallback() for when this call is made.
+            function loginSuccessful() {
+                console.log('Welcome!  Fetching your information.... ');
+                FB.api('/me', function (response) {
+                    console.log('Successful login for: ' + response.name);
+                    console.log(JSON.stringify(response));
+                    //alert(response.name);
+                    window.location.href = '@Url.Action("TestTransfer", "HomePage", new { name = "_name" })'.replace("_name", response.name);
+                    //document.getElementById('id-login').innerHTML =
+                    //    'Xin chào: ' + response.name + '!';
+                });
+            }
+
+            function logout() {
+                FB.logout(function (response) {
+                    // Person is now logged out
+                    console.log('logout');
+                });
+            }
+
+            //function RequestLoginFB() {
+            //    window.location = 'http://graph.facebook.com/oauth/authorize?client_id=276667759411773&redirect_uri=http://localhost:49991';
+            //}
+            </script>
+
+            <!--
+              Below we include the Login Button social plugin. This button uses
+              the JavaScript SDK to present a graphical Login button that triggers
+              the FB.login() function when clicked.
+            -->
+            <div class="Login_Line" id="Login_Line2"></div>
+            <div id="btn-fb-login">Hoặc đăng nhập với Facebook: <fb:login-button scope="public_profile,email" onlogin="checkLoginState()" size="large" auto_logout_link="true"> </fb:login-button></div>
+            <!--fb login - end-->
+            @*<div id="status" style="display:none">
+                </div>*@
+
+            @*<input type="button" value="ĐĂNG NHẬP" onclick="RequestLoginFB()" />*@
+
+
+            @*<button onclick="getStatus()">check</button>
+                <button onclick="logout()">logout</button>*@
+
+        </div>
+
+        <!-- popup -->
+        @*<div><br /><input type="button" value="Click to show Popup" onclick="showPopup()" /></div>*@
+
+        @*<div id="divContainPopup" class="table-responsive">
+                <div><label>popup content</label></div>
+            </div>*@
+
+        <script type="text/javascript">
+            function showPopup() {
+                $("#divContainPopupDangNhap").dialog({
+                    height: 400,
+                    width: 500,
+                    //modal: true,
+                    buttons: {
+                        "Cancel": function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                });
+            }
+        </script>
+        <!-- popup - end -->
+        <script>
+            function Click() {
+                alert("click");
+                window.location.href = '@Url.Action("TestTransfer", "HomePage", new { name = "_name" })';
+                    //document.getElementById("id_login").innerHTML = "hihi";
+                TempData["name"] = "Sơn";
+                }
+        </script>
+        @*<input type="button" value="Button" onclick="Click()" />*@
+    </div>
+</body>
+</html>

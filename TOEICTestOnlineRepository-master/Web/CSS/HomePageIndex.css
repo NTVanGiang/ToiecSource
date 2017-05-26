@@ -1,0 +1,12 @@
+﻿h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: green;
+    margin: 30px;
+}
+
+.fb-like {
+    margin: 10px;
+}

@@ -1,0 +1,109 @@
+﻿#menu-left a {
+    /*background: #ddd;*/
+    /*width: 240px;*/
+    /*padding-top: 1px;*/
+    /*margin-left: 14px;*/
+    text-decoration: none;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+#menu-left li {
+    list-style-type: none;
+}
+
+#menu-left .menu-left-1 {
+    margin-top: 10px;
+}
+
+    #menu-left .menu-left-1 li {
+        line-height: 28px;
+        border-bottom: 1px dotted black;
+        padding: 0 24px;
+    }
+
+    #menu-left .menu-left-1 > ul > li {
+        background-image: url('../images/icon1.png');
+        background-repeat: no-repeat;
+        background-position: 4px 10px;
+        margin-left: 26px;
+        width: 191px;
+    }
+
+        #menu-left .menu-left-1 > ul > li > a {
+            padding-left: 0px;
+        }
+
+    #menu-left .menu-left-1 > a {
+        color: white;
+        font-weight: 600;
+        /*background-color: #bb0000;*/
+        background-image: url('../images/bgEnglish2.png');
+        background-repeat: no-repeat;
+        background-size: 180px;
+        display: block; /*block*/
+        width: 230px;
+        height: 45px;
+        padding: 9px 28px;
+    }
+
+        #menu-left .menu-left-1 > a:hover {
+            color: blue;
+        }
+
+#menu-left .menu-left-2 {
+    margin-top: 8px;
+}
+    /*
+.menu-left-2:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu {
+    position: absolute;
+    left: 250px;
+    top: 0px;
+    display:none;
+}*/
+
+    #menu-left .menu-left-2 li {
+        line-height: 24px;
+        border-bottom: none;
+        padding: 0 1em; /*16px*/
+        background-image: url('../images/icon2.png');
+        background-repeat: no-repeat;
+        background-position: 0px 12px;
+    }
+
+    #menu-left .menu-left-2 > a {
+        color: black;
+        font-weight: 600;
+    }
+
+        #menu-left .menu-left-2 > a:hover {
+            color: #0846e0;
+        }
+
+    #menu-left .menu-left-2 > ul > li > a {
+        color: black;
+    }
+
+        #menu-left .menu-left-2 > ul > li > a:hover {
+            color: #fb0b68;
+        }
+
+/*.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid gray;
+}*/
+
+/*#main {
+    background: green;
+    width: auto;
+    height: auto;
+    margin: 300px;
+    padding: 0;
+}*/

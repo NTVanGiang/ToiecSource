@@ -1,0 +1,212 @@
+﻿.my-part {
+    font-size: 24px;
+    color: green;
+    font-style: italic;
+}
+
+.my-bold {
+    font-weight: bold;
+}
+
+.my-center {
+    text-align: center;
+}
+
+.my-background {
+    background-color: skyblue;
+    padding: 8px 10px 10px;
+}
+
+.my-background-2 {
+    background-color: skyblue;
+    padding: 8px 10px 10px;
+}
+
+    .my-background-2 > div {
+        margin-bottom: 20px;
+    }
+
+        .my-background-2 > div:last-child {
+            margin-bottom: 10px;
+        }
+
+/*#content div {
+    margin: 10px 0px 10px 0;
+}*/
+
+/*div:first-child {
+        margin: 10px 0 0 0;
+    }*/
+
+#test-frame {
+    /*background-color: blue;*/
+    width: 1201px;
+    margin: 0 auto;
+    min-height: 1200px;
+}
+
+#content {
+    /*border: 1px solid black;*/
+    height: 800px;
+    background-color: gray;
+    margin-top: 10px;
+}
+
+#test-frame-left {
+    background-color: white;
+    width: 849px;
+    /*min-height: 900px;*/
+    float: left;
+    /*padding: 0 30px;*/
+    height: 800px;
+    border: 1px solid limegreen;
+    border-radius: 25px;
+}
+
+#test-frame-left-scroll {
+    overflow-y: scroll;
+    height: 760px;
+    margin: 20px 0;
+}
+
+#test-frame-left-content {
+    padding: 0 50px;
+}
+
+    #test-frame-left-content div {
+        width: 719px;
+        margin: 10px 0px 10px 0;
+    }
+
+#test-frame-right {
+    background-color: white;
+    width: 324px;
+    /*min-height: 900px;*/
+    float: right;
+    height: 780px;
+    border: 1px solid limegreen;
+    border-radius: 25px;
+    padding-left: 25px;
+    padding-top: 20px;
+}
+
+#test-frame-right-scroll {
+    overflow-y: scroll;
+    height: 760px;
+    margin: 20px 0;
+}
+
+#test-frame-right-content {
+    padding: 0 30px;
+}
+
+    #test-frame-right-content div {
+        margin: 0 1px 5px 0;
+    }
+
+#top {
+    height: 30px;
+    background-color: limegreen;
+}
+
+#top-part {
+    display: none;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+#top-time {
+    margin-top: 16px;
+}
+
+.part {
+    width: 600px;
+}
+
+.time {
+    width: 200px;
+}
+
+#top > div > ul {
+    padding-left: 25px;
+}
+
+    #top > div > ul > li {
+        background-color: limegreen;
+        float: left;
+        width: 60px;
+        list-style: none;
+        border-right: 1px solid black;
+        margin: 6px 3px 3px 17px;
+        /*top right bot left*/
+        font-weight: bold;
+    }
+
+        #top > div > ul > li:last-child {
+            border-right: none;
+        }
+
+#top label {
+    height: 30px;
+    font-size: 24px;
+    margin-left: 50px;
+    color: red;
+    /*text-align: center;*/
+}
+
+.row {
+    /*background-color: red;*/
+    clear: both;
+}
+
+.col {
+    background-color: lightseagreen;
+    width: 50px;
+    height: 40px;
+    float: left;
+}
+
+.row > .col:first-child {
+    text-align: right;
+    font-weight: bold;
+    width: 25px;
+}
+
+.col img {
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+#bot {
+    clear: both;
+    margin-top: 10px;
+}
+
+.myButton {
+    width: 120px;
+    height: 25px;
+    border-radius: 10px;
+    color: green;
+    border-color: green;
+    background-color: transparent;
+    font-size: 16px;
+    float: left;
+}
+
+    .myButton :focus,
+    .myButton:hover {
+        font-style: italic;
+        font-size: 18px;
+    }
+
+.myButton-right {
+    float: right;
+}
+
+#btnPrevious {
+    margin-left: 100px;
+}
+
+#btnResult {
+    margin-right: 100px;
+}
